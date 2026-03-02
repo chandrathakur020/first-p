@@ -1,0 +1,71 @@
+public class pushpop {
+    private int [] arr=new int [3];
+    
+    int top;
+    int size;
+    public pushpop()
+    {
+        size=arr.length;
+        top=-1;
+    }
+    public void push (int data)
+    {
+        top++;
+        if (top<size)
+         arr [top]=data;
+         else
+         {
+             top--;
+        System.out.println("Overflow");
+         }
+    }
+    public int pop()
+    {
+        if (top>-1)
+         return (arr[top--]);
+         else
+         {
+        System.out.println("Underflow");
+         }
+         return 0;
+    }
+    public  int peek()
+	{
+	return arr[top];
+	}
+	public static void main(String as[])
+	{
+		System.out.println(" Stack");
+		
+		
+		pushpop nums =new pushpop();
+		/*nums.push(10);
+		System.out.println(nums);
+		int m=nums.peek();
+		System.out.println(m);
+		nums.push(25);
+		nums.push(89);
+	
+		int n=nums.pop();
+		System.out.println("poped element"+n);
+		m=nums.peek();
+		System.out.println(m);*/
+		
+		nums.push(30);
+		nums.push(78);
+		nums.push(76);
+		nums.push(89);
+        
+        int popped = nums.pop();
+       System.out.println("Popped element: " + popped);
+
+       int top = nums.peek();
+       System.out.println("Top element: " + top);
+		
+		
+		
+	}
+
+}
+    
+
